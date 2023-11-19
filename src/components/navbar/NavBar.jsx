@@ -45,14 +45,26 @@ const NavBar = () => {
                         _hover={{ bg: 'gray.400' }}
                         _expanded={{ bg: 'blue.400' }}
                         _focus={{ boxShadow: 'outline' }}
-                    >Servicios <ChevronDownIcon/>
+                    >Filtrar <ChevronDownIcon/>
                         
                     </MenuButton>
                     <MenuList>
-                        <MenuItem>Consulta</MenuItem>
+                        {/* <MenuItem>Consulta</MenuItem>
                         <MenuItem>Revisión de Estudios</MenuItem>
                         <MenuItem>Chip</MenuItem>
-                        <MenuItem>Plasma</MenuItem>
+                        <MenuItem>Plasma</MenuItem> */}
+                        <MenuItem>Todos</MenuItem>
+                        
+                        <Link to = {"/500ml"}>
+                            <MenuItem>
+                            500ml
+                            </MenuItem>
+                        </Link>
+                        <Link to = {"/250ml"}>
+                            <MenuItem>
+                            250ml
+                            </MenuItem>
+                        </Link>
                     </MenuList>
                 </Menu>
                 <Button colorScheme='teal'>

@@ -32,9 +32,6 @@ const ItemDetail = ({p}) => {
                 <CardFooter>
                 <ButtonGroup spacing='2'>
                     <ItemCount/>
-                <Button variant='solid' colorScheme='pink'>
-                    Agregar al carrito
-                </Button>
                 </ButtonGroup>
             </CardFooter> 
         </Card>

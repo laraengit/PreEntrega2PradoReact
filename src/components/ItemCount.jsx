@@ -1,7 +1,6 @@
 import{useState} from 'react'
-import { Button, Badge, useToast } from '@chakra-ui/react'
+import { Button, Badge, useToast, Flex, Spacer, ButtonGroup } from '@chakra-ui/react'
 import useCounter from '../hooks/useCounter'
-
 
 const ItemCount = () => {
     
@@ -24,15 +23,24 @@ const ItemCount = () => {
 
   return (
     <div>
-        <Button colorScheme='teal' variant='outline' onClick ={increment}>
-            +
-        </Button>
-        <Badge colorScheme='green'>{count}</Badge>
-        <Button colorScheme='teal' variant='outline' onClick ={decrement}>
-            -
-        </Button>
+        <Flex minWidth='max-content' alignItems='center' justifyContent= "space-around">
+            <ButtonGroup >
+                <Button  colorScheme='teal' variant='outline' onClick ={increment}>
+                    +
+                </Button>
+                {count}
+                <Button colorScheme='teal' variant='outline' onClick ={decrement}>
+                    -
+                </Button>
+            </ButtonGroup>
+            
 
-        <Button colorScheme='cyan' onClick ={addToCart}>Solicitar</Button>
+            <Spacer/>
+
+            <Button   colorScheme='cyan' onClick ={addToCart}>Agregar al carrito</Button>
+
+        </Flex>
+        
     </div>
   )
 }
