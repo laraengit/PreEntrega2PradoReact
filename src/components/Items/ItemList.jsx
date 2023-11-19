@@ -4,19 +4,10 @@ import { Flex, Spacer } from '@chakra-ui/react'
 
 const ItemList = ({productos}) => {
   return (
-    <Flex>
-        
+    <Flex minWidth='max-content' alignItems='center' justifyContent= "space-around" flexWrap="nowrap">
         {productos.map((p)=>{
           return(
-
-            <div key = {p.id} gap = "20">
-              <Item p = {p} />
-            </div>
-
-              
-
-            
-            
+            <Item p = {p} key = {p.id} />
           )
         })}
         

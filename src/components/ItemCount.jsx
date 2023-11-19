@@ -1,10 +1,13 @@
 import{useState} from 'react'
 import { Button, Badge, useToast } from '@chakra-ui/react'
+import useCounter from '../hooks/useCounter'
 
 
 const ItemCount = () => {
     
-    const [count,setCount] = useState(0)
+    /* const [count,setCount] = useState(0) */
+
+    const {count, increment, decrement} = useCounter(0,1)
     const toast = useToast()
 
     const addToCart = ()=>{
@@ -21,11 +24,11 @@ const ItemCount = () => {
 
   return (
     <div>
-        <Button colorScheme='teal' variant='outline' onClick ={()=>setCount(count+1)}>
+        <Button colorScheme='teal' variant='outline' onClick ={increment}>
             +
         </Button>
         <Badge colorScheme='green'>{count}</Badge>
-        <Button colorScheme='teal' variant='outline' onClick ={()=>setCount(count-1)}>
+        <Button colorScheme='teal' variant='outline' onClick ={decrement}>
             -
         </Button>
 
