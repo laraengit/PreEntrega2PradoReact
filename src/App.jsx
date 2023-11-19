@@ -7,7 +7,7 @@ import Servicio from './components/Servicio'
 import ComponenteMuestra from './components/ComponenteMuestra'
 import ItemDetailContainer from './components/ItemsDetail/ItemDetailCointainer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './components/Home'
+
 
 
 

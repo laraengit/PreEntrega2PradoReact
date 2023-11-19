@@ -53,7 +53,11 @@ const NavBar = () => {
                         <MenuItem>Revisión de Estudios</MenuItem>
                         <MenuItem>Chip</MenuItem>
                         <MenuItem>Plasma</MenuItem> */}
-                        <MenuItem>Todos</MenuItem>
+                        <Link to = {"/"}>
+                            <MenuItem>
+                            Todos
+                            </MenuItem>
+                        </Link>
                         
                         <Link to = {"/500ml"}>
                             <MenuItem>
